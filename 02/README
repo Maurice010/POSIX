@@ -1,0 +1,36 @@
+========================================================================
+Autor: Jakub Kozak
+========================================================================
+
+Zawartosc:
+==========
+
+I.
+Program wywolujący trzy razy funkcje fork w petli for, wypisujacy identyfikatory
+dla kazdego procesu (korzystajac z zad2_a.c) oraz wymuszający na
+procesie macierzystym czekanie na zakonczenie wszystkich procesow potomnych.
+Program sklada sie z: 
+1) zad2.c  - program glowny.
+2) zad2_a.c - program wypisujacy identyfikatory dla poszczegolnych procesow.
+------------------------------------------------------------------------
+
+Jak uruchomic program:
+=======================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby uruchomic program, nalezy wykonac:
+       make run2 arg=./run2_a.x
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+
+
