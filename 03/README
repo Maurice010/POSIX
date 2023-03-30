@@ -1,0 +1,49 @@
+========================================================================
+Autor: Jakub Kozak
+========================================================================
+
+Zawartosc:
+==========
+
+I.
+Program pobiera podczas wywolania argumenty [sygnal] i [opcja]. Nastepnie, w zaleznosci od podanej opcji (1 - operacja domyslna, 2 - ignorowanie, 3 - obsluga wlasna), obsluguje
+sygnal o podanym numerze.
+Program sklada sie z: 
+1) zad3_a.c  - program glowny.
+
+II.
+Program tworzy proces potomny, uruchamia w nim program I (zad3_a.x) i wysyla do niego sygnaly za pomoca funkcji kill, sprawdzajac wczesniej czy istnieje.
+Program sklada sie z: 
+1) zad3_b.c  - program glowny.
+2) zad3_a.c  - program obslugujacy sygnaly.
+
+III.
+Program tworzy proces potomny i ustawia go na lidera nowej grupy procesow. Nastepnie uruchamia w nim kilka procesow potomnych, ktore analogicznie do programu II uruchamiaja program I (zad3_a.x). Ostatecznie pierwszy proces macierzysty wysyla sygnaly do nowo utworzonej grupy procesow.
+Program sklada sie z: 
+1) zad3_c.c  - program glowny.
+2) zad3_a.c  - program obslugujacy sygnaly.
+
+------------------------------------------------------------------------
+
+Jak uruchomic programy:
+=======================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby uruchomic programy, nalezy wykonac:
+       make run3_a arg1=[numer sygnalu] arg2=[numer opcji od 1-3]
+       make run3_b arg1=[numer sygnalu] arg2=[numer opcji od 1-3]
+       make run3_c arg1=[numer sygnalu] arg2=[numer opcji od 1-3]
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+
+

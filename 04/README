@@ -1,0 +1,36 @@
+========================================================================
+Autor: Jakub Kozak
+========================================================================
+
+Zawartosc:
+==========
+
+I.
+Program implementuje problem "Producenta i konsumenta" przy pomocy potokow nienazwanych. Na poczatku tworzony jest potok nienazwany, a zaraz po nim proces potomny. Proces macierzysty pelni role producenta przerzucajac dane z pliku towar.txt do potoku, skad proces potomny (konsument) pobiera i zapisuje dane do magazyn.txt. Oba procesy wykonuja powyzsze czynnosci z losowym, maksymalnie kilkusekundowym opoznieniem. Porcje danych wysylanych do potoku nie sa rowne porcji pobieranych. Podczas swojego dzialania procesy wypisuja zapisywane i pobierane dane na ekranie przy pomocy funkcji write(). Po zakonczeniu oba pliki tekstowe sa sprawdzane przy pomocy polecenia diff -s umieszczonego w Makefile.
+Program sklada sie z: 
+1) zad4.c  - program glowny.
+2) towar.txt - zawiera dane do przeniesienia
+3) magazyn.txt - miejsce docelowe danych z towar.txt
+
+------------------------------------------------------------------------
+
+Jak uruchomic programy:
+=======================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania programu, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby uruchomic programy, nalezy wykonac:
+       make run4
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+
+

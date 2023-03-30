@@ -1,0 +1,38 @@
+========================================================================
+Autor: Jakub Kozak
+========================================================================
+
+Zawartosc:
+==========
+
+I.
+Program implementuje problem "Producenta i konsumenta" przy pomocy pamieci dzielonej i semaforow. Program glowny (zad7) tworzy pamiec dzielona, semafory i uzywajac funkcji fork oraz exec otwiera proces producenta i konsumenta. Producent przerzuca dane z pliku towar.txt do pamieci dzielonej, skad konsument pobiera i zapisuje je do magazyn.txt. Podczas swojego dzialania procesy wypisuja zapisywane i pobierane dane na ekranie. Po zakonczeniu oba pliki tekstowe sa sprawdzane przy pomocy polecenia diff -s umieszczonego w Makefile.
+Program składa się z:
+1) zad7 - program glowny
+2) producent - program pobierajacy dane z towar.txt i przenoszacy je do pamieci dzielonej
+4) konsument - program pobierajacy dane z  pamieci dzielonej i przenoszacy je do magazyn.txt
+3) zad7_lib.c, zad7_lib.h - biblioteka zawierajaca funkcje do operowania na semaforach i pamieci dzielonej
+
+------------------------------------------------------------------------
+
+Jak uruchomic programy:
+=======================
+
+Katalog zawiera program Makefile do kompilacji, linkowania i uruchamiania programow, a takze czyszczenia katalogu i jego archiwizacji.
+
+-> Aby uruchomic programy, nalezy wykonac:
+	1) Z biblioteka statyczna:
+		make run7 
+	2) Z biblioteka dzielona:
+		make run7d
+
+-> Aby wyczyscic zawartosc katalogu, nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+
+

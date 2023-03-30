@@ -1,0 +1,45 @@
+========================================================================
+Autor: Jakub Kozak
+========================================================================
+
+Zawartosc:
+==========
+
+I.
+Program implementuje problem "Producenta i konsumenta" analogicznie do programu zad4.c przy pomocy potokow nazwanych. Na poczatku tworzony jest potok nazwany "towarfifo", a zaraz po nim proces potomny. Proces macierzysty pelni role producenta przerzucajac dane z pliku towar.txt do potoku, skad proces potomny (konsument) pobiera i zapisuje dane do magazyn.txt. Oba procesy wykonuja powyzsze czynnosci z losowym, maksymalnie kilkusekundowym opoznieniem. Porcje danych wysylanych do potoku nie sa rowne porcji pobieranych. Podczas swojego dzialania procesy wypisuja zapisywane i pobierane dane na ekranie przy pomocy funkcji write(). Po zakonczeniu oba pliki tekstowe sa sprawdzane przy pomocy polecenia diff -s umieszczonego w Makefile. Po zakonczeniu dzialania konsumenta, proces macierzysty usuwa potok nazwany za pomoca atexit i unlink.
+Program sklada sie z: 
+1) zad5_a.c  - program glowny
+2) towar.txt - zawiera dane do przeniesienia
+3) magazyn.txt - miejsce docelowe danych z towar.txt
+
+II.
+Implementowany jest problem "Producenta i konsumenta" w duzej mierze tak samo jak w programie I. Na poczatku tworzony jest potok nazwany "towarfifo" poprzez komende mkfifo znajdujaca sie w Makfile. Nastepnie uruchamiane sa rownolegle dwa procesy - "zad5_bw" (producent) i "zad5_br" (konsument), dzieki poleceniu xterm -hold (w Makefile). "zad5_bw" pelni role producenta przerzucajac dane z pliku towar.txt do potoku FIFO, skad "zad5_br" pobiera i zapisuje dane do magazyn.txt. Oba procesy wykonuja powyzsze czynnosci z losowym, maksymalnie kilkusekundowym opoznieniem. Porcje danych wysylanych do potoku nie sa rowne porcji pobieranych. Podczas swojego dzialania procesy wypisuja zapisywane i pobierane dane na ekranie przy pomocy funkcji write(). Potok nazwany mozna usunac wpisujac w terminalu make clean.
+Program sklada sie z: 
+1) zad5_aw.c  - producent
+2) zad5_ar.c  - konsument
+3) towar.txt - zawiera dane do przeniesienia
+4) magazyn.txt - miejsce docelowe danych z towar.txt
+
+------------------------------------------------------------------------
+
+Jak uruchomic programy:
+=======================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby uruchomic programy, nalezy wykonac:
+       make run5_a
+       make rub5_b
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki, w tym potok FIFO), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+
+

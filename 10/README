@@ -1,0 +1,32 @@
+========================================================================
+Autor: Jakub Kozak
+========================================================================
+
+Zawartosc:
+==========
+
+I.
+Program implementuje algorytm piekarni. W celu pokazania, ze kazdy watek wszedl do sekcji krytycznej odpowiednia ilosc razy inkrementowana jest zmienna globalna "register" i wyswietlana na koniec dzialania programu.
+Program składa się z:
+1) zad10 - program glowny
+
+------------------------------------------------------------------------
+
+Jak uruchomic program:
+=======================
+
+Katalog zawiera program Makefile do kompilacji, linkowania i uruchamiania programow, a takze czyszczenia katalogu i jego archiwizacji.
+
+-> Aby uruchomic program, nalezy wykonac:
+	make run10
+
+-> Aby wyczyscic zawartosc katalogu, nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+
+

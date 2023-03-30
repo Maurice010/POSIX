@@ -1,0 +1,34 @@
+========================================================================
+Autor: Jakub Kozak
+========================================================================
+
+Zawartosc:
+==========
+
+I.
+Uruchamiane sa dwa programy - serwer i kilent(2x). Klient wysyla do serwera zadanie wykonania dzialania arytmetycznego. Serwer wykonuje zadane dzialanie i wysyla wynik do klienta. Wszystko jest implementowane za pomoca kolejek komunikatow. Serwer moze obslugiwac wiele klientow naraz.
+Program składa się z:
+1) zad8_serwer - serwer
+2) zad8_klient - klient
+3) zad8_lib.c, zad8_lib.h - biblioteka zawierajaca funkcje do operowania na kolejkach komunikatow
+
+------------------------------------------------------------------------
+
+Jak uruchomic program:
+=======================
+
+Katalog zawiera program Makefile do kompilacji, linkowania i uruchamiania programow, a takze czyszczenia katalogu i jego archiwizacji.
+
+-> Aby uruchomic program, nalezy wykonac:
+	make run8
+
+-> Aby wyczyscic zawartosc katalogu, nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+
+
