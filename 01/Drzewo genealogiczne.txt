@@ -1,0 +1,17 @@
+Proces macierzysty:
+UID = 1000, GID = 1000, PID = 2967, PPID = 1717, PGID = 2967
+Procesy potomne:
+UID = 1000, GID = 1000, PID = 2968, PPID = 2967, PGID = 2967
+UID = 1000, GID = 1000, PID = 2969, PPID = 2968, PGID = 2967
+UID = 1000, GID = 1000, PID = 2970, PPID = 2967, PGID = 2967
+UID = 1000, GID = 1000, PID = 2971, PPID = 2969, PGID = 2967
+UID = 1000, GID = 1000, PID = 2972, PPID = 2968, PGID = 2967
+UID = 1000, GID = 1000, PID = 2973, PPID = 2970, PGID = 2967
+UID = 1000, GID = 1000, PID = 2974, PPID = 2967, PGID = 2967
+
+2967
+  | --------- 2968
+  |             |
+  | -- 2970     | --- 2969
+  |      |      |       |
+2974   2973   2972    2971

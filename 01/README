@@ -1,0 +1,67 @@
+========================================================================
+Autor: Jakub Kozak
+========================================================================
+
+Zawartosc:
+==========
+
+I.
+Program wypisujacy identyfikatory UID, GID, PID, PPID i PGID dla danego
+procesu.
+Program sklada sie z jednego modulu: 
+1) zad1_a.c  - program glowny. 
+
+II.
+Program wywolujący trzy razy funkcje fork w petli for, wypisujacy identyfiaktory
+dla kazdego procesu macierzystego i procesow potomnych oraz wymuszający na
+procesie macierzystym czekanie na zakonczenie wszystkich procesow potomnych.
+Program sklada sie z jednego modulu: 
+1) zad1_b.c  - program glowny.
+
+III.
+Program wywolujący trzy razy funkcje fork w pętli for i sprawiający, za pomocą funkcji
+sleep, ze procesy potomne są adoptowane przez proces systemd.
+Program sklada sie z jednego modulu: 
+1) zad1_c.c  - program glowny.
+
+IV.
+Program wywoluje trzy razy funkcje fork w petli i wypisuje procesy pogrupowane
+pokoleniami od najstarszego do najmlodszego.
+Program sklada sie z jednego modulu: 
+1) zad1_d.c  - program glowny.
+
+V.
+Program wywoluje trzy razy funkcje fork w petli i sprawia, ze kazdy proces potomny
+staje sie liderem swojej wlasnej grupy procesow.
+Program sklada sie z jednego modulu: 
+1) zad1_e.c  - program glowny.
+
+VI.
+Plik tekstowy zwierajacy drzewo genealogiczne procesow utworzonych przy pomocy programu IV.
+------------------------------------------------------------------------
+
+Jak uruchomic programy:
+=======================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby uruchomic kolejne programy, nalezy wykonac dla odpowiedniego
+   programu jedna z komend:
+       make run1a
+       make run1b
+       make run1c
+       make run1d
+       make run1e
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+
+
